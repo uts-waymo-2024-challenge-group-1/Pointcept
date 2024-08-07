@@ -11,7 +11,7 @@ from addict import Dict
 
 from pointcept.models.utils.serialization import encode, decode
 from pointcept.models.utils import offset2batch, batch2offset
-from pointcept.models.utils.birdseye import BirdsEye  # Import BirdsEye
+# from pointcept.models.utils.birdseye import BirdsEye  # Import BirdsEye
 
 class Point(Dict):
     """
@@ -181,9 +181,9 @@ class Point(Dict):
         octree.construct_all_neigh()
         self["octree"] = octree
 
-    def to_birds_eye_view(self):
-        """
-        Transforms the point cloud to a birds-eye view perspective.
-        """
-        birds_eye = BirdsEye(self)
-        return birds_eye.transform()
+    # def to_birds_eye_view(self):
+    #     """
+    #     Transforms the point cloud to a birds-eye view perspective.
+    #     """
+    #     birds_eye = BirdsEye(self)
+    #     return birds_eye.transform()
